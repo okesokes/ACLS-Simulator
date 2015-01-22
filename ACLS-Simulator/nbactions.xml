@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <actions>
+
     <action>
         <actionName>CUSTOM-cobertura</actionName>
         <displayName>cobertura</displayName>
@@ -8,6 +9,7 @@
             <goal>cobertura:cobertura</goal>
         </goals>
     </action>
+
     <action>
         <actionName>CUSTOM-pit</actionName>
         <displayName>pit</displayName>
@@ -15,4 +17,13 @@
             <goal>org.pitest:pitest-maven:mutationCoverage</goal>
         </goals>
     </action>
+    
+    <action>
+        <actionName>CUSTOM-Javadoc</actionName>
+        <displayName>Javadoc</displayName>
+        <goals>
+            <goal>javadoc:javadoc</goal>
+        </goals>
+    </action>
+
 </actions>
