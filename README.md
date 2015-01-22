@@ -1,8 +1,6 @@
-# ACLS-Simulator
-ACLS (advanced cardiac life support) simulator
+# Advanced Cardiac Life Support Simulator
 
-
-*'ACLS Simulator'* by okesokes is very experimental piece of software and
+*'Advanced Cardiac Life Support Simulator'* by *okesokes* is very experimental piece of software and
 should not be considered as (proper) ACLS training tool in any circumstances.
 
 **Use the program at your own risk!**
