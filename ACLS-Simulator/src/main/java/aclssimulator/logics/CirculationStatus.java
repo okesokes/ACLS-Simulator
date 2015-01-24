@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aclssimulator.acls.simulator.appLogics;
+package aclssimulator.logics;
 
 /**
  *
@@ -45,4 +45,3 @@ public class CirculationStatus implements Runnable {
     }
 }
 
-}

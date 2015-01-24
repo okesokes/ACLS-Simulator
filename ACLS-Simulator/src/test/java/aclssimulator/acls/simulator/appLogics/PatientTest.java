@@ -6,6 +6,7 @@ package aclssimulator.acls.simulator.appLogics;
  * and open the template in the editor.
  */
 
+import aclssimulator.logics.Patient;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
