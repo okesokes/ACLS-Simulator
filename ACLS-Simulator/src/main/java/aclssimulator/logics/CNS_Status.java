@@ -15,7 +15,7 @@ import java.util.*;
 // Early WIP
 // Consider capsulating the vital organ functions to avoid cross dependencies
 
-public class CNS_Status {
+public class CNS_Status implements Runnable {
     // cnsOxygenationLevel can vary from 0 (fatal level) to 100 (full oxygenation)
     private int cnsOxygenationLevel;
     // if cumulativeBrainDamage value exceeds given threshold, the CNS is fatally damaged and long term prognosis status
@@ -29,6 +29,7 @@ public class CNS_Status {
     
     // requires threaded execution
     public void estimateCumulativeBrainDamage(int CNS_OxygenationLevel) {
+        run();
        // retrieve situationOnGoing boolean value from the main application logics class
         // while (situationOnGoing) {
             // determine measurement frequency by Thread.sleep(ms); value
@@ -37,5 +38,10 @@ public class CNS_Status {
             
             // remember to divide the result by measurement frequency before add operation!
         // }
+    }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
