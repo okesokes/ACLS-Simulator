@@ -11,6 +11,7 @@ import java.util.*;
  *
  * @author okesokes
  */
+
 // Early WIP
 public class Patient {
 
@@ -59,6 +60,19 @@ public class Patient {
             System.out.println("Exception during initialization of status of patient");
             return false;
         }
+    }
+    
+    @Override
+    public String toString() {
+        String sex = "";
+        if (this.isMale == true) {
+            sex = "male";
+        } else {
+            sex = "female";
+        }
+        
+        return "PATIENT:  sex: " + sex + ", age: " + this.age + " yrs, length: "
+                + this.lengthCm + " cm, weight: " + this.weightKg + " cm";
     }
 
 }

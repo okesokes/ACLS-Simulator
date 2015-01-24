@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package aclssimulator.logics;
 
 /**
@@ -12,7 +13,7 @@ package aclssimulator.logics;
 
 // Early WIP
 
-public class VentilationStatus {
+public class VentilationStatus implements Runnable {
     private int breathingFrequency;
 
     public VentilationStatus(int breathingFrequency) {
@@ -21,7 +22,12 @@ public class VentilationStatus {
     
     // requires threaded execution
     public void simulateVentilationStatus() {
-        
+        run();
+    }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

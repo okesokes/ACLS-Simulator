@@ -1,4 +1,4 @@
-package aclssimulator.acls.simulator.appLogics;
+package aclssimulator.logics;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
