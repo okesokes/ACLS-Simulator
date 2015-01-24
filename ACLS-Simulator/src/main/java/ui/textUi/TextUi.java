@@ -5,10 +5,27 @@
  */
 package ui.textUi;
 
+import java.util.Scanner;
+
 /**
  *
  * @author okesokes
  */
 public class TextUi {
-    
+
+    private Scanner reader;
+
+    public TextUi(Scanner reader) {
+        this.reader = reader;
+    }
+
+    public int requestPatientAge() {
+        int patientAge = 0;
+
+        while (patientAge < 1 && patientAge > 110) {
+            patientAge = Integer.parseInt(this.reader.nextLine());
+        }
+        
+        return patientAge;
+    }
 }

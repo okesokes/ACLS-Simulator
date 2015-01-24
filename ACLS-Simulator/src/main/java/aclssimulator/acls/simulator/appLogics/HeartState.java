@@ -20,7 +20,7 @@ package aclssimulator.acls.simulator.appLogics;
 
 // Early WIP
 
-public enum HeartStatuses {
+public enum HeartState {
     SINUS_RHYTHM,
     VENTRICULAR_FIBRILLATION,
     VENTRICULAR_TACHYCARDIA,

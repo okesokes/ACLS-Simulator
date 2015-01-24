@@ -9,24 +9,29 @@ package aclssimulator.acls.simulator.appLogics;
  *
  * @author okesokes
  */
-
 // Early WIP
+public class CirculationStatus implements Runnable {
 
-public class CirculationStatus {
     private int heartbeatsPerMinute;
     private int systoleMmHg;
     private int diastoleMmHg;
-    // add ENUM heartstatus
-    
-    public CirculationStatus(int heartbeatsPerMinute, int systoleMmHg, int diastoleMmHg) {
+    private HeartState heartState;
+
+    public CirculationStatus(int heartbeatsPerMinute, int systoleMmHg, int diastoleMmHg, HeartState heartState) {
         this.heartbeatsPerMinute = heartbeatsPerMinute;
         this.systoleMmHg = systoleMmHg;
         this.diastoleMmHg = diastoleMmHg;
+        this.heartState = heartState;
     }
-    
+
     // requires threaded execution
     // treatment parameters yet to be included
     public void simulateCirculationStatus() {
+        run();
+    }
+
+    @Override
+    public void run() {
         // retrieve situationOnGoing value from main application logics class
         try {
             // while (situationOnGoing) {
@@ -35,8 +40,9 @@ public class CirculationStatus {
             // pay attention to heartbeatsPerMinute value (if 0, patient is in cardiac arrest)
             // }
         } catch (Exception e) {
-                System.out.println("Exception during simulation of circulation status");
-                }
+            System.out.println("Exception during simulation of circulation status");
+        }
     }
-    
+}
+
 }
