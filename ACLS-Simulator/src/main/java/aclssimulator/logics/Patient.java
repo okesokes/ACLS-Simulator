@@ -13,20 +13,25 @@ import java.util.*;
  */
 
 // Early WIP
+
+// Lacks getter & setter methods!!
+
 public class Patient {
 
     private int age;
     private int weightKg;
     private int lengthCm;
+    private int bodyTemperature;
     private boolean isMale;
     private CNS_Status cnsStatus;
     private CirculationStatus circulationStatus;
     private VentilationStatus ventilationStatus;
 
-    public Patient(int age, int weightKg, int lengthCm, boolean isMale) {
+    public Patient(int age, int weightKg, int lengthCm, int bodyTemperature, boolean isMale) {
         this.age = age;
         this.weightKg = weightKg;
         this.lengthCm = lengthCm;
+        this.bodyTemperature = bodyTemperature;
         this.isMale = isMale;
 
         initVitals();
@@ -64,6 +69,7 @@ public class Patient {
     
     @Override
     public String toString() {
+        // Check patient sex to prepare for printing
         String sex = "";
         if (this.isMale == true) {
             sex = "male";
@@ -71,6 +77,7 @@ public class Patient {
             sex = "female";
         }
         
+        // Print patient info
         return "PATIENT:  sex: " + sex + ", age: " + this.age + " yrs, length: "
                 + this.lengthCm + " cm, weight: " + this.weightKg + " cm";
     }

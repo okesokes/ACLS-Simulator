@@ -34,7 +34,7 @@ public class PatientTest {
     
     @Before
     public void setUp() {
-        this.testPatient = new Patient(60, 85, 175, true);
+        this.testPatient = new Patient(60, 85, 175, 37, true);
     }
     
     @After

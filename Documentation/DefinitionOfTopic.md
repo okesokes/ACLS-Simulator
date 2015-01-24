@@ -19,6 +19,7 @@ At first, the program initializes status of patient, and the user must analyze i
 			- pulse pressure
 		- heart state
 			- rhythm (SC/VF/VT/TA/BRA/PEA/ASY)
+		- effect of body temperature (e.g. too cold heart won't start beating)
 	- ventilation
 		- frequency of breathing (BF)
 		- (quality of breathing)
@@ -28,6 +29,7 @@ At first, the program initializes status of patient, and the user must analyze i
 	- CNS (central nervous system) status
 		- level of cerebral perfusion & oxygenation
 		- cumulative cerebral damage caused by hypoxia/anoxia
+		- effect of body temperature in tolerance of hypoxia
 	- (pH)
 		- (possibly effects of acidosis control during lack of spontaneus circulation in future)
 
