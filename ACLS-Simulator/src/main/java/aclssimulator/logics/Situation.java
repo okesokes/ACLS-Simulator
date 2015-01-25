@@ -5,6 +5,8 @@
  */
 package aclssimulator.logics;
 
+import java.util.Scanner;
+
 /**
  *
  * @author okesokes
@@ -16,9 +18,18 @@ package aclssimulator.logics;
 
 public class Situation {
     private Patient patient;
+    private TextUiTemp textUiTemp;
     
-    public Situation() {
+    public Situation(TextUiTemp textUiTemp, Scanner reader) {
+        this.textUiTemp = textUiTemp;
         
+    }
+    
+    public void requestPatientInitInfo() {
+        boolean isMale = this.textUiTemp.requestPatientSex();
+        int patientAge = this.textUiTemp.requestPatientAge();
+        int patientWeight = this.textUiTemp.requestPatientWeightKg();
+        int patientHeight = this.textUiTemp.requestPatientHeightCm();
     }
     
 }

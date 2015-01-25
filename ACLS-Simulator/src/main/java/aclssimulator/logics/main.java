@@ -19,9 +19,9 @@ public class main {
         // Init input scanner
         Scanner reader = new Scanner(System.in);
         // Init text-based user interface
-        TextUi textUi = new TextUi(reader);
+        TextUiTemp textUiTemp = new TextUiTemp(reader);
         
-        Situation situation = new Situation();
+        Situation situation = new Situation(textUiTemp, reader);
         
         // 1. request patient parameters
         
@@ -34,7 +34,7 @@ public class main {
         // 3. request situation and status parameters (optional)
         // 4. initialize situation and patient status
         
-        
+        System.out.println("--- END OF PROGRAM EXECUTION ---");
     }
 
 }

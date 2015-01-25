@@ -12,6 +12,9 @@ import java.util.Scanner;
  *
  * @author okesokes
  */
+
+// Early WIP
+
 public class TextUiTemp {
 
     private Scanner reader;
@@ -34,16 +37,16 @@ public class TextUiTemp {
         return patientAge;
     }
 
-    public int requestPatientLengthCm() {
-        int patientLengthCm = 0;
+    public int requestPatientHeightCm() {
+        int patientHeightCm = 0;
 
-        while (patientLengthCm < 50 && patientLengthCm > 220) {
-            System.out.print("Please type the length of patient in cm (from 50 to 220 cm): ");
-            patientLengthCm = Integer.parseInt(this.reader.nextLine());
+        while (patientHeightCm < 50 && patientHeightCm > 220) {
+            System.out.print("Please type the height of patient in cm (from 50 to 220 cm): ");
+            patientHeightCm = Integer.parseInt(this.reader.nextLine());
         }
 
-        System.out.println("Length of patient set!");
-        return patientLengthCm;
+        System.out.println("Height of patient set!");
+        return patientHeightCm;
     }
 
     public int requestPatientWeightKg() {

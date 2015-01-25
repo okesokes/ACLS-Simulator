@@ -20,7 +20,7 @@ public class Patient {
 
     private int age;
     private int weightKg;
-    private int lengthCm;
+    private int heightCm;
     // Body temperature is measured in Celsius degrees (°C)
     private int bodyTemperature;
     private boolean isMale;
@@ -28,10 +28,10 @@ public class Patient {
     private CirculationStatus circulationStatus;
     private VentilationStatus ventilationStatus;
 
-    public Patient(int age, int weightKg, int lengthCm, int bodyTemperature, boolean isMale) {
+    public Patient(int age, int weightKg, int heightCm, int bodyTemperature, boolean isMale) {
         this.age = age;
         this.weightKg = weightKg;
-        this.lengthCm = lengthCm;
+        this.heightCm = heightCm;
         this.bodyTemperature = bodyTemperature;
         this.isMale = isMale;
 
@@ -68,10 +68,12 @@ public class Patient {
         }
     }
     
+    // Measured in Celsius degrees
     public int getBodyTemperature() {
         return this.bodyTemperature;
     }
     
+    // Measured in Celsius degrees
     public void setBodyTemperature(int bodyTemperature) {
         this.bodyTemperature = bodyTemperature;
     }
@@ -88,7 +90,7 @@ public class Patient {
         
         // Print patient info
         return "PATIENT:  sex: " + sex + ", age: " + this.age + " yrs, length: "
-                + this.lengthCm + " cm, weight: " + this.weightKg + " kg";
+                + this.heightCm + " cm, weight: " + this.weightKg + " kg";
     }
 
 }
