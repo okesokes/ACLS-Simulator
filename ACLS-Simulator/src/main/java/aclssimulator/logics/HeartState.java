@@ -21,11 +21,13 @@ package aclssimulator.logics;
 // Early WIP
 
 public enum HeartState {
-    SINUS_RHYTHM,
+    // NSR is not supported yet
+    // NORMAL_SINUS_RHYTHM,
     VENTRICULAR_FIBRILLATION,
-    VENTRICULAR_TACHYCARDIA,
     PULSELESS_VENTRICULAR_TACHYCARDIA,
-    BRADYCARDIA,
-    PEA,
+    SINUS_TACHYCARDIA,
+    SINUS_BRADYCARDIA,
+    // Note to self: PEA might not be accurate enough as description of rhythm?
+    PULSELESS_ELECTRICAL_ACTIVITY,
     ASYSTOLE;
 }

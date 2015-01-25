@@ -18,7 +18,7 @@ At first, the program initializes status of patient, and the user must analyze i
 			- diastole
 			- pulse pressure
 		- heart state
-			- rhythm (SC/VF/VT/TA/BRA/PEA/ASY)
+			- rhythm (NSR/VF/VT/ST/SB/PEA/ASY) (might implement more rhythms in future)
 		- effect of body temperature (e.g. too cold heart won't start beating)
 	- ventilation
 		- frequency of breathing (BF)

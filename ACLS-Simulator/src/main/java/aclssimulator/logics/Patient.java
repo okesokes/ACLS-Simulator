@@ -79,7 +79,7 @@ public class Patient {
         
         // Print patient info
         return "PATIENT:  sex: " + sex + ", age: " + this.age + " yrs, length: "
-                + this.lengthCm + " cm, weight: " + this.weightKg + " cm";
+                + this.lengthCm + " cm, weight: " + this.weightKg + " kg";
     }
 
 }

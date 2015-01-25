@@ -5,7 +5,9 @@
  */
 package aclssimulator.logics;
 
+import aclssimulator.ui.textUi.TextUi;
 import java.util.*;
+import aclssimulator.logics.*;
 
 /**
  *
@@ -15,26 +17,25 @@ import java.util.*;
 public class main {
    
     public static void main(String[] args) {
-        
+        // Init input scanner
         Scanner reader = new Scanner(System.in);
+        // Init text-based user interface
+        TextUi textUi = new TextUi(reader);
+        
+        Situation situation = new Situation();
         
         // 1. request patient parameters
         
         // WIP
         
-        earlyTestPatient();
-        
         // 2. initialize patient
+        
+        
+        
         // 3. request situation and status parameters (optional)
         // 4. initialize situation and patient status
         
         
     }
 
-    private static void earlyTestPatient() {
-        
-        Patient testPatient = new Patient(50, 95, 182, true);
-        
-        
-    }
 }

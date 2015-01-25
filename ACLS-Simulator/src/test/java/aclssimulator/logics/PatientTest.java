@@ -46,6 +46,7 @@ public class PatientTest {
     
      @Test
      public void patientInitialized() {
+         // WIP
          assertEquals(true, true);
      }
      

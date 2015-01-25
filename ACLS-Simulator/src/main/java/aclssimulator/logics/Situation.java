@@ -12,6 +12,8 @@ package aclssimulator.logics;
 
 // Early WIP
 
+// This class handles the requests related to initialization of the situation
+
 public class Situation {
     private Patient patient;
     

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.textUi;
+package aclssimulator.ui.textUi;
 
+import aclssimulator.logics.*;
 import java.util.Scanner;
 
 /**
@@ -14,9 +15,11 @@ import java.util.Scanner;
 public class TextUi {
 
     private Scanner reader;
+    private UserInputHandler userInputHandler;
 
     public TextUi(Scanner reader) {
         this.reader = reader;
+        this.userInputHandler = new UserInputHandler();
     }
 
     public int requestPatientAge() {
@@ -28,7 +31,6 @@ public class TextUi {
         }
 
         System.out.println("Age of patient set!");
-
         return patientAge;
     }
 
@@ -41,7 +43,6 @@ public class TextUi {
         }
 
         System.out.println("Length of patient set!");
-
         return patientLengthCm;
     }
 
@@ -54,7 +55,6 @@ public class TextUi {
         }
 
         System.out.println("Weight of patient set!");
-
         return patientWeightKg;
     }
 
@@ -79,8 +79,7 @@ public class TextUi {
         return isMale;
     }
 
-    // WIP: methods to request vital function states to init vital functions with given parameters
-    
+    // WIP: methods to request vital function states to init vital functions with parameters set by user
     public int requestTimeInCardiacArrest() {
         int timeInCardiacArrest = -1;
 
@@ -97,7 +96,7 @@ public class TextUi {
         int CPRTime = -1;
 
         while (CPRTime < 0 && CPRTime > 45) {
-            System.out.print("For how long has the patient been given CPR (in minutes)?");
+            System.out.print("For how long has the patient been given CPR during the cardiac arrest (in minutes)?");
             CPRTime = Integer.parseInt(this.reader.nextLine());
         }
 
@@ -105,4 +104,40 @@ public class TextUi {
         return CPRTime;
     }
 
+    public HeartState requestPatientHeartState() {
+        HeartState patientHeartState = HeartState.VENTRICULAR_FIBRILLATION;
+        boolean patientHeartStateSetByUser = false;
+
+        while (!patientHeartStateSetByUser) {
+            System.out.print("Please set initial rhythm of heart by typing the abbreviation of the rhythm (VF/VT/ST/SB/PEA/ASY): ");
+            String userInput = this.reader.nextLine();
+
+            // Attempt to recognize the rhythm from user input - if this fails, print exception message and request rhythm again from user
+            // otherwise save the given heart state, quit loop and return the heart state
+            try {
+                patientHeartState = this.userInputHandler.recognizeGivenRhythm(userInput);
+                patientHeartStateSetByUser = true;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+
+        }
+        
+        System.out.println("Heart state set!");
+        return patientHeartState;
+    }
+
+    public int requestPatientBreathingFrequency() {
+        int patientBreathingFrequency = -1;
+
+        while (patientBreathingFrequency < 0 && patientBreathingFrequency > 40) {
+            System.out.print("What is the breathing frequency of patient (0 - 40 1/min - type '0' if patient is not breathing): ");
+            patientBreathingFrequency = Integer.parseInt(this.reader.nextLine());
+        }
+
+        System.out.println("Breathing frequency set!");
+        return patientBreathingFrequency;
+    }
+    
 }
+
