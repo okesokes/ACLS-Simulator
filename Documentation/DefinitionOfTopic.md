@@ -18,8 +18,17 @@ At first, the program initializes status of patient, and the user must analyze i
 			- diastole
 			- pulse pressure
 		- heart state
-			- rhythm (NSR/VF/VT/ST/SB/PEA/ASY) (might implement more rhythms in future)
-		- effect of body temperature (e.g. too cold heart won't start beating)
+			- rhythm patterns - VF/VT/ST/SB/PEA/ASY (might implement more rhythms in future)
+				- VF = Ventricular Fibrillation
+				- VT = Ventricular Tachycardia
+				- ST = Sinus Tachycardia
+				- SB = Sinus Bradycardia
+				- PEA = Pulseless Electrical Activity
+				- ASY = Asystole
+		- effect of body temperature
+			- too cold heart won't start beating
+			- chest compressions applied to severely hypothermic patient (core temp < 30°C) can trigger VF
+			- hypothermia protects CNS from damage caused by hypoxia/anoxia
 	- ventilation
 		- frequency of breathing (BF)
 		- (quality of breathing)
