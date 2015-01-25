@@ -44,7 +44,7 @@
                 <configuration>
                     <instrumentation>
                         <includes>
-                            <include>aclssimulator.acls.simulator/*.class</include>
+                            <include>aclssimulator.logics/*.class</include>
                         </includes>
                     </instrumentation>
                 </configuration>
@@ -57,10 +57,10 @@
                 <version>0.30</version>
                 <configuration>
                     <targetClasses>
-                        <param>aclssimulator.acls.simulator.*</param>
+                        <param>aclssimulator.logics.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>aclssimulator.acls.simulator.*</param>
+                        <param>aclssimulator.logics.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

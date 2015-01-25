@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aclssimulator.ui;
+package aclssimulator.logics;
 
 import aclssimulator.logics.HeartState;
 import java.util.Scanner;
@@ -12,12 +12,12 @@ import java.util.Scanner;
  *
  * @author okesokes
  */
-public class TextUi {
+public class TextUiTemp {
 
     private Scanner reader;
     private UserInputHandler userInputHandler;
 
-    public TextUi(Scanner reader) {
+    public TextUiTemp(Scanner reader) {
         this.reader = reader;
         this.userInputHandler = new UserInputHandler();
     }

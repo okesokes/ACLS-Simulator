@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aclssimulator.ui;
+package aclssimulator.logics;
 
 import aclssimulator.logics.HeartState;
 
@@ -35,4 +35,5 @@ public class UserInputHandler {
         else if (input.matches("ASY")) return HeartState.ASYSTOLE;
         else throw new Exception("Heart rhythm abbreviation was not recognized, please try again!");
     }
+    
 }
