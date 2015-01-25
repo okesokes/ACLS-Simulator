@@ -21,6 +21,7 @@ public class Patient {
     private int age;
     private int weightKg;
     private int lengthCm;
+    // Body temperature is measured in Celsius degrees (°C)
     private int bodyTemperature;
     private boolean isMale;
     private CNS_Status cnsStatus;
@@ -50,7 +51,7 @@ public class Patient {
             
             this.cnsStatus = new CNS_Status(70);
             
-            // BPM = 0 indicates cardiac arrest (VF), the latter values indicate blood pressure measured in mmHg during CPR
+            // BPM = 0 indicates cardiac arrest (type VF), the latter values indicate blood pressure measured in mmHg during CPR
             
             this.circulationStatus = new CirculationStatus(0, 50, 20, HeartState.VENTRICULAR_FIBRILLATION);
             
@@ -65,6 +66,14 @@ public class Patient {
             System.out.println("Exception during initialization of status of patient");
             return false;
         }
+    }
+    
+    public int getBodyTemperature() {
+        return this.bodyTemperature;
+    }
+    
+    public void setBodyTemperature(int bodyTemperature) {
+        this.bodyTemperature = bodyTemperature;
     }
     
     @Override

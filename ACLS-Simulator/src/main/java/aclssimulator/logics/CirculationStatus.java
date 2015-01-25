@@ -9,7 +9,9 @@ package aclssimulator.logics;
  *
  * @author okesokes
  */
+
 // Early WIP
+
 public class CirculationStatus implements Runnable {
 
     private int heartbeatsPerMinute;
@@ -43,5 +45,41 @@ public class CirculationStatus implements Runnable {
             System.out.println("Exception during simulation of circulation status");
         }
     }
+    
+    public int getSystolicPressure() {
+        return this.systoleMmHg;
+    }
+    
+    private void setSystolicPressure(int newSystolicPressureMmHg) {
+        this.systoleMmHg = newSystolicPressureMmHg;
+    }
+    
+    public int getDiastolicPressure() {
+        return this.diastoleMmHg;
+    }
+    
+    private void setDiastolicPressure(int newDiastolicPressureMmHg) {
+        this.diastoleMmHg = newDiastolicPressureMmHg;
+    }
+    
+    public int getHeartBPM() {
+        return this.heartbeatsPerMinute;
+    }
+    
+    private void setHeartBPM(int newHeartBPM) {
+        this.heartbeatsPerMinute = newHeartBPM;
+    }
+    
+    public HeartState getHeartState() {
+        return this.heartState;
+    }
+    
+    // Note: setHeartState is public in order to change it manually if desired
+    public void setHeartState(HeartState newHeartState) {
+        this.heartState = newHeartState;
+        // react to change of new heart state (should reflect to other variables in this class immediately)
+        // ...
+    }
+    
 }
 

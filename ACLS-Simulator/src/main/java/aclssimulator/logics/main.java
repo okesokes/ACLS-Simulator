@@ -5,7 +5,7 @@
  */
 package aclssimulator.logics;
 
-import aclssimulator.ui.textUi.TextUi;
+import aclssimulator.ui.TextUi;
 import java.util.*;
 import aclssimulator.logics.*;
 
