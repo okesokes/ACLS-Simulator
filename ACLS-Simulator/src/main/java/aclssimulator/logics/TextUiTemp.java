@@ -26,7 +26,7 @@ public class TextUiTemp {
     }
 
     public int requestPatientAge() {
-        int patientAge = 0;
+        int patientAge = -1;
 
         while (patientAge < 1 && patientAge > 110) {
             System.out.print("Please type the age of patient (from 1 to 110 yrs): ");
@@ -53,7 +53,7 @@ public class TextUiTemp {
         int patientWeightKg = 0;
 
         while (patientWeightKg < 4 && patientWeightKg > 200) {
-            System.out.print("Please type the weight of patient in kgs (from 4 to 200 kg)");
+            System.out.print("Please type the weight of patient in kgs (from 4 to 200 kg): ");
             patientWeightKg = Integer.parseInt(this.reader.nextLine());
         }
 
@@ -66,7 +66,7 @@ public class TextUiTemp {
         boolean isMale = false;
 
         while (!patientSexString.matches("male") || !patientSexString.matches("female")) {
-            System.out.print("Please type the sex of patient ('male' or 'female')");
+            System.out.print("Please type the sex of patient ('male' or 'female'): ");
             patientSexString = this.reader.nextLine();
             patientSexString = patientSexString.toLowerCase();
             if (patientSexString.matches("male")) {
@@ -81,13 +81,25 @@ public class TextUiTemp {
         System.out.println("Patient sex set!");
         return isMale;
     }
+    
+    public int requestPatientBodyTemperature() {
+        int patientBodyTemperature = -1;
+        
+        while (patientBodyTemperature < 15 && patientBodyTemperature > 45) {
+            System.out.print("Please type body temperature of the patient (in Celsius degrees, between 15°C and 45°C): ");
+            patientBodyTemperature = Integer.parseInt(this.reader.nextLine());
+        }
+        
+        System.out.println("Body temperature of patient set!");
+        return patientBodyTemperature;
+    }
 
     // WIP: methods to request vital function states to init vital functions with parameters set by user
     public int requestTimeInCardiacArrest() {
         int timeInCardiacArrest = -1;
 
         while (timeInCardiacArrest < 0 && timeInCardiacArrest > 60) {
-            System.out.print("For how long has the patient been in cardiac arrest (in minutes)?");
+            System.out.print("For how long has the patient been in cardiac arrest (in minutes): ");
             timeInCardiacArrest = Integer.parseInt(this.reader.nextLine());
         }
 
@@ -99,7 +111,7 @@ public class TextUiTemp {
         int CPRTime = -1;
 
         while (CPRTime < 0 && CPRTime > 45) {
-            System.out.print("For how long has the patient been given CPR during the cardiac arrest (in minutes)?");
+            System.out.print("For how long has the patient been given CPR during the cardiac arrest (in minutes): ");
             CPRTime = Integer.parseInt(this.reader.nextLine());
         }
 

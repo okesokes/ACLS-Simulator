@@ -22,6 +22,8 @@ public class main {
         TextUiTemp textUiTemp = new TextUiTemp(reader);
         
         Situation situation = new Situation(textUiTemp, reader);
+        // WIP: Invert the flawed logic in TextUi info request methods (negation + && -> ||)
+        situation.requestPatientInitInfo();
         
         // 1. request patient parameters
         
