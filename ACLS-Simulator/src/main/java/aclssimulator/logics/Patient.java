@@ -60,10 +60,10 @@ public class Patient {
             this.ventilationStatus = new VentilationStatus(0);
             */
             
-            System.out.println("Vitals of the patient have been initialized successfully");
+            System.out.println("Vitals of the patient have been initialized successfully!");
             return true;
         } catch (Exception e) {
-            System.out.println("Exception during initialization of status of patient");
+            System.out.println("Exception during initialization of status of patient!");
             return false;
         }
     }

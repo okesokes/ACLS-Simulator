@@ -28,7 +28,7 @@ public class TextUiTemp {
     public int requestPatientAge() {
         int patientAge = -1;
 
-        while (patientAge < 1 && patientAge > 110) {
+        while (patientAge < 1 || patientAge > 110) {
             System.out.print("Please type the age of patient (from 1 to 110 yrs): ");
             patientAge = Integer.parseInt(this.reader.nextLine());
         }
@@ -40,7 +40,7 @@ public class TextUiTemp {
     public int requestPatientHeightCm() {
         int patientHeightCm = 0;
 
-        while (patientHeightCm < 50 && patientHeightCm > 220) {
+        while (patientHeightCm < 50 || patientHeightCm > 220) {
             System.out.print("Please type the height of patient in cm (from 50 to 220 cm): ");
             patientHeightCm = Integer.parseInt(this.reader.nextLine());
         }
@@ -52,7 +52,7 @@ public class TextUiTemp {
     public int requestPatientWeightKg() {
         int patientWeightKg = 0;
 
-        while (patientWeightKg < 4 && patientWeightKg > 200) {
+        while (patientWeightKg < 4 || patientWeightKg > 200) {
             System.out.print("Please type the weight of patient in kgs (from 4 to 200 kg): ");
             patientWeightKg = Integer.parseInt(this.reader.nextLine());
         }
@@ -85,7 +85,7 @@ public class TextUiTemp {
     public int requestPatientBodyTemperature() {
         int patientBodyTemperature = -1;
         
-        while (patientBodyTemperature < 15 && patientBodyTemperature > 45) {
+        while (patientBodyTemperature < 15 || patientBodyTemperature > 45) {
             System.out.print("Please type body temperature of the patient (in Celsius degrees, between 15°C and 45°C): ");
             patientBodyTemperature = Integer.parseInt(this.reader.nextLine());
         }
@@ -98,7 +98,7 @@ public class TextUiTemp {
     public int requestTimeInCardiacArrest() {
         int timeInCardiacArrest = -1;
 
-        while (timeInCardiacArrest < 0 && timeInCardiacArrest > 60) {
+        while (timeInCardiacArrest < 0 || timeInCardiacArrest > 60) {
             System.out.print("For how long has the patient been in cardiac arrest (in minutes): ");
             timeInCardiacArrest = Integer.parseInt(this.reader.nextLine());
         }
@@ -110,7 +110,7 @@ public class TextUiTemp {
     public int requestCPRTime() {
         int CPRTime = -1;
 
-        while (CPRTime < 0 && CPRTime > 45) {
+        while (CPRTime < 0 || CPRTime > 45) {
             System.out.print("For how long has the patient been given CPR during the cardiac arrest (in minutes): ");
             CPRTime = Integer.parseInt(this.reader.nextLine());
         }
@@ -145,7 +145,7 @@ public class TextUiTemp {
     public int requestPatientBreathingFrequency() {
         int patientBreathingFrequency = -1;
 
-        while (patientBreathingFrequency < 0 && patientBreathingFrequency > 40) {
+        while (patientBreathingFrequency < 0 || patientBreathingFrequency > 40) {
             System.out.print("What is the breathing frequency of patient (0 - 40 1/min - type '0' if patient is not breathing): ");
             patientBreathingFrequency = Integer.parseInt(this.reader.nextLine());
         }
