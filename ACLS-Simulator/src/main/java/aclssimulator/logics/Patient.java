@@ -21,7 +21,7 @@ public class Patient {
     private int age;
     private int weightKg;
     private int heightCm;
-    // Body temperature is measured in Celsius degrees (°C)
+    // Body temperature is measured in degrees Celsius (°C)
     private int bodyTemperature;
     private boolean isMale;
     private CNS_Status cnsStatus;

@@ -14,16 +14,25 @@ import aclssimulator.logics.HeartState;
 public class UserInputHandlerTemp {
 
     public String toLowerCase(String input) {
-        return input.toLowerCase();
+        try {
+            return input.toLowerCase();
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     public String toUpperCase(String input) {
-        return input.toUpperCase();
+        try {
+            return input.toUpperCase();
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     public HeartState recognizeGivenRhythm(String rhythmAbbreviation) throws Exception {
         String input = rhythmAbbreviation.toUpperCase();
-
+        
+        // Consider accessing enum HeartState via CirculationStatus instead of direct access
         // NSR is not supported yet
         // if (input.matches("NSR")) return HeartState.NORMAL_SINUS_RHYTHM;
         if (input.matches("VF")) {
@@ -51,7 +60,7 @@ public class UserInputHandlerTemp {
         } catch (Exception e) {
             return -1;
         }
-        
+
         return parsedInt;
     }
 

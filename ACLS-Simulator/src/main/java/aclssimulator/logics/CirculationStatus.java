@@ -15,14 +15,14 @@ package aclssimulator.logics;
 public class CirculationStatus implements Runnable {
 
     private int heartbeatsPerMinute;
-    private int systoleMmHg;
-    private int diastoleMmHg;
+    private int systolicMmHg;
+    private int diastolicMmHg;
     private HeartState heartState;
 
-    public CirculationStatus(int heartbeatsPerMinute, int systoleMmHg, int diastoleMmHg, HeartState heartState) {
+    public CirculationStatus(int heartbeatsPerMinute, int systolicMmHg, int diastolicMmHg, HeartState heartState) {
         this.heartbeatsPerMinute = heartbeatsPerMinute;
-        this.systoleMmHg = systoleMmHg;
-        this.diastoleMmHg = diastoleMmHg;
+        this.systolicMmHg = systolicMmHg;
+        this.diastolicMmHg = diastolicMmHg;
         this.heartState = heartState;
     }
 
@@ -47,19 +47,19 @@ public class CirculationStatus implements Runnable {
     }
     
     public int getSystolicPressure() {
-        return this.systoleMmHg;
+        return this.systolicMmHg;
     }
     
     private void setSystolicPressure(int newSystolicPressureMmHg) {
-        this.systoleMmHg = newSystolicPressureMmHg;
+        this.systolicMmHg = newSystolicPressureMmHg;
     }
     
     public int getDiastolicPressure() {
-        return this.diastoleMmHg;
+        return this.diastolicMmHg;
     }
     
     private void setDiastolicPressure(int newDiastolicPressureMmHg) {
-        this.diastoleMmHg = newDiastolicPressureMmHg;
+        this.diastolicMmHg = newDiastolicPressureMmHg;
     }
     
     public int getHeartBPM() {

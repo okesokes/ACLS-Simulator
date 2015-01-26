@@ -22,7 +22,6 @@ public class Situation {
     
     public Situation(TextUiTemp textUiTemp, Scanner reader) {
         this.textUiTemp = textUiTemp;
-        
     }
     
     public void requestPatientInitInfo() {
@@ -36,7 +35,6 @@ public class Situation {
         this.textUiTemp.requestTimeInCardiacArrest();
         this.textUiTemp.requestCPRTime();
         this.textUiTemp.requestPatientBreathingFrequency();
-        
         
         this.patient = new Patient(patientAge, patientWeight, patientHeight, patientBodyTemperature, isMale);
         this.patient.toString();

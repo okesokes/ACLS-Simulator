@@ -84,7 +84,7 @@ public class TextUiTemp {
         int patientBodyTemperature = -1;
 
         while (patientBodyTemperature < 15 || patientBodyTemperature > 45) {
-            System.out.print("Please type body temperature of the patient (in Celsius degrees, between 15°C and 45°C): ");
+            System.out.print("Please type body temperature of the patient (in degrees Celsius, between 15°C and 45°C): ");
             patientBodyTemperature = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
@@ -135,8 +135,11 @@ public class TextUiTemp {
             }
 
         }
-
-        System.out.println("Heart state set!");
+        
+        // Consider adding cardiac rhythm check here - patient in asystole is probably not breathing!
+        // Check should probably be handled via application logics class
+        
+        System.out.println("Cardiac rhythm set!");
         return patientHeartState;
     }
 
