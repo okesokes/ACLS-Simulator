@@ -89,8 +89,9 @@ public class Patient {
         }
         
         // Print patient info
-        return "PATIENT:  sex: " + sex + ", age: " + this.age + " yrs, length: "
-                + this.heightCm + " cm, weight: " + this.weightKg + " kg";
+        return "PATIENT:  SEX: " + sex + ", AGE: " + this.age + " yrs, HEIGHT: "
+                + this.heightCm + " cm, WEIGHT: " + this.weightKg + " kg, BODY TEMPERATURE: "
+                + this.bodyTemperature + " °C";
     }
 
 }

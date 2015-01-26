@@ -37,7 +37,7 @@ public class Situation {
         this.textUiTemp.requestPatientBreathingFrequency();
         
         this.patient = new Patient(patientAge, patientWeight, patientHeight, patientBodyTemperature, isMale);
-        this.patient.toString();
+        System.out.println(this.patient.toString());
     }
     
 }

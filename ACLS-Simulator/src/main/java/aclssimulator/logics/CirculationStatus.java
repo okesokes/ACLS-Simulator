@@ -78,7 +78,8 @@ public class CirculationStatus implements Runnable {
     public void setHeartState(HeartState newHeartState) {
         this.heartState = newHeartState;
         // react to change of new heart state (should reflect to other variables in this class immediately)
-        // ...
+        // link to other status classes (eg. ST -> VF ---> stagnation of blood pressure and 
+        // cerebral oxygenation, agonal respiration etc.)
     }
     
 }
