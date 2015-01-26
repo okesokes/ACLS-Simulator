@@ -12,17 +12,15 @@ import java.util.Scanner;
  *
  * @author okesokes
  */
-
 // Early WIP
-
 public class TextUiTemp {
 
     private Scanner reader;
-    private UserInputHandler userInputHandler;
+    private UserInputHandlerTemp userInputHandler;
 
     public TextUiTemp(Scanner reader) {
         this.reader = reader;
-        this.userInputHandler = new UserInputHandler();
+        this.userInputHandler = new UserInputHandlerTemp();
     }
 
     public int requestPatientAge() {
@@ -30,7 +28,7 @@ public class TextUiTemp {
 
         while (patientAge < 1 || patientAge > 110) {
             System.out.print("Please type the age of patient (from 1 to 110 yrs): ");
-            patientAge = Integer.parseInt(this.reader.nextLine());
+            patientAge = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
         System.out.println("Age of patient set!");
@@ -42,7 +40,7 @@ public class TextUiTemp {
 
         while (patientHeightCm < 50 || patientHeightCm > 220) {
             System.out.print("Please type the height of patient in cm (from 50 to 220 cm): ");
-            patientHeightCm = Integer.parseInt(this.reader.nextLine());
+            patientHeightCm = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
         System.out.println("Height of patient set!");
@@ -54,7 +52,7 @@ public class TextUiTemp {
 
         while (patientWeightKg < 4 || patientWeightKg > 200) {
             System.out.print("Please type the weight of patient in kgs (from 4 to 200 kg): ");
-            patientWeightKg = Integer.parseInt(this.reader.nextLine());
+            patientWeightKg = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
         System.out.println("Weight of patient set!");
@@ -81,15 +79,15 @@ public class TextUiTemp {
         System.out.println("Patient sex set!");
         return isMale;
     }
-    
+
     public int requestPatientBodyTemperature() {
         int patientBodyTemperature = -1;
-        
+
         while (patientBodyTemperature < 15 || patientBodyTemperature > 45) {
             System.out.print("Please type body temperature of the patient (in Celsius degrees, between 15°C and 45°C): ");
-            patientBodyTemperature = Integer.parseInt(this.reader.nextLine());
+            patientBodyTemperature = this.userInputHandler.parseInt(this.reader.nextLine());
         }
-        
+
         System.out.println("Body temperature of patient set!");
         return patientBodyTemperature;
     }
@@ -100,7 +98,7 @@ public class TextUiTemp {
 
         while (timeInCardiacArrest < 0 || timeInCardiacArrest > 60) {
             System.out.print("For how long has the patient been in cardiac arrest (in minutes): ");
-            timeInCardiacArrest = Integer.parseInt(this.reader.nextLine());
+            timeInCardiacArrest = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
         System.out.println("Time in cardiac arrest set!");
@@ -112,7 +110,7 @@ public class TextUiTemp {
 
         while (CPRTime < 0 || CPRTime > 45) {
             System.out.print("For how long has the patient been given CPR during the cardiac arrest (in minutes): ");
-            CPRTime = Integer.parseInt(this.reader.nextLine());
+            CPRTime = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
         System.out.println("Time of given CPR set!");
@@ -137,7 +135,7 @@ public class TextUiTemp {
             }
 
         }
-        
+
         System.out.println("Heart state set!");
         return patientHeartState;
     }
@@ -146,13 +144,18 @@ public class TextUiTemp {
         int patientBreathingFrequency = -1;
 
         while (patientBreathingFrequency < 0 || patientBreathingFrequency > 40) {
-            System.out.print("What is the breathing frequency of patient (0 - 40 1/min - type '0' if patient is not breathing): ");
-            patientBreathingFrequency = Integer.parseInt(this.reader.nextLine());
+            System.out.print("Is the patient breathing ('yes'/'no')?: ");
+            String patientBreathing = this.userInputHandler.toLowerCase(this.reader.nextLine());
+            if (patientBreathing.matches("no")) {
+                patientBreathingFrequency = 0;
+            } else if (patientBreathing.matches("yes")) {
+                System.out.print("Please type the breathing frequency of the patient (0 - 40 1/min - type '0' if patient is not breathing ): ");
+                patientBreathingFrequency = this.userInputHandler.parseInt(this.reader.nextLine());
+            }
         }
 
         System.out.println("Breathing frequency set!");
         return patientBreathingFrequency;
     }
-    
-}
 
+}

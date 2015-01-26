@@ -31,6 +31,12 @@ public class Situation {
         int patientWeight = this.textUiTemp.requestPatientWeightKg();
         int patientHeight = this.textUiTemp.requestPatientHeightCm();
         int patientBodyTemperature = this.textUiTemp.requestPatientBodyTemperature();
+        // Temporary test (functionality & user input & logics & et cetera tests)
+        this.textUiTemp.requestPatientHeartState();
+        this.textUiTemp.requestTimeInCardiacArrest();
+        this.textUiTemp.requestCPRTime();
+        this.textUiTemp.requestPatientBreathingFrequency();
+        
         
         this.patient = new Patient(patientAge, patientWeight, patientHeight, patientBodyTemperature, isMale);
         this.patient.toString();
