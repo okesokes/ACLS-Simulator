@@ -23,6 +23,7 @@ public class SimulateCirculation implements Runnable {
 
         } catch (Exception e) {
             System.out.println("Exception during simulation of circulation status!");
+            attemptRestoringCirculationSimulation();
         }
     }
     

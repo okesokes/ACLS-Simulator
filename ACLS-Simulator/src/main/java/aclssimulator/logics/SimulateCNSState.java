@@ -1,4 +1,3 @@
-
 package aclssimulator.logics;
 
 /**
@@ -18,9 +17,13 @@ public class SimulateCNSState implements Runnable {
     @Override
     public void run() {
         try {
-
+            // determine measurement frequency by Thread.sleep(ms); value
+            // add to cumulativeBrainDamage variable incrementally every time
+            // when the CNS_OxygenationLevel variable exceeds threshold value
+            // -- remember to divide the result by measurement frequency before add operation!
         } catch (Exception e) {
             System.out.println("Exception during simulation of CNS state!");
+            attemptRestoringCNSStateSimulation();
         }
     }
 

@@ -1,4 +1,3 @@
-
 package aclssimulator.logics;
 
 import aclssimulator.logics.HeartState;
@@ -131,10 +130,9 @@ public class TextUiTemp {
             }
 
         }
-        
+
         // Consider adding cardiac rhythm check here - patient in asystole is probably not breathing!
         // Check should probably be handled via application logics class
-        
         System.out.println("Cardiac rhythm set!");
         return patientHeartState;
     }
@@ -144,7 +142,7 @@ public class TextUiTemp {
 
         while (patientBreathingFrequency < 0 || patientBreathingFrequency > 40) {
             System.out.print("Is the patient breathing ('yes'/'no')?: ");
-            String patientBreathing = this.userInputHandler.toLowerCase(this.reader.nextLine());
+            String patientBreathing = this.userInputHandler.toLowerCaseCheck(this.reader.nextLine());
             if (patientBreathing.matches("no")) {
                 patientBreathingFrequency = 0;
             } else if (patientBreathing.matches("yes")) {
@@ -157,4 +155,26 @@ public class TextUiTemp {
         return patientBreathingFrequency;
     }
 
+    public BreathingType requestPatientBreathingType() {
+        BreathingType patientBreathingType = BreathingType.RESPIRATORY_ARREST;
+        boolean patientBreathingTypeSetByUser = false;
+
+        while (!patientBreathingTypeSetByUser) {
+            System.out.print("Please set the state of respiration of the patient ('normal', 'agonal', 'arrest'): ");
+            String userInput = this.reader.nextLine();
+
+            // Attempt to recognize the state of respiration from user input - if this fails, print exception message and request it again from user
+            // otherwise save the given state of respiration, quit loop and return it
+            try {
+                patientBreathingType = this.userInputHandler.recognizeGivenBreathingType(userInput);
+                patientBreathingTypeSetByUser = true;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+
+        }
+        
+        return patientBreathingType;
+    }
+    
 }

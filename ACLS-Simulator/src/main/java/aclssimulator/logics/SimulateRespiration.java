@@ -21,6 +21,7 @@ public class SimulateRespiration implements Runnable {
 
         } catch (Exception e) {
             System.out.println("Exception during simulation of respiration status!");
+            attemptRestoringRespirationSimulation();
         }
     }
 

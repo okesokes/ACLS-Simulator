@@ -1,4 +1,3 @@
-
 package aclssimulator.logics;
 
 import aclssimulator.logics.HeartState;
@@ -7,12 +6,10 @@ import aclssimulator.logics.HeartState;
  *
  * @author okesokes
  */
-
-// Contains functionality related to user input checks and tweaks
-
+// Contains functionality related to user input checks and minor adjustments
 public class UserInputHandlerTemp {
 
-    public String toLowerCase(String input) {
+    public String toLowerCaseCheck(String input) {
         try {
             return input.toLowerCase();
         } catch (Exception e) {
@@ -20,7 +17,7 @@ public class UserInputHandlerTemp {
         }
     }
 
-    public String toUpperCase(String input) {
+    public String toUpperCaseCheck(String input) {
         try {
             return input.toUpperCase();
         } catch (Exception e) {
@@ -30,7 +27,7 @@ public class UserInputHandlerTemp {
 
     public HeartState recognizeGivenRhythm(String rhythmAbbreviation) throws Exception {
         String input = rhythmAbbreviation.toUpperCase();
-        
+
         // Consider accessing enum HeartState via CirculationStatus instead of direct access
         // NSR is not supported yet
         // if (input.matches("NSR")) return HeartState.NORMAL_SINUS_RHYTHM;
@@ -49,6 +46,20 @@ public class UserInputHandlerTemp {
             return HeartState.ASYSTOLE;
         } else {
             throw new Exception("Heart rhythm abbreviation was not recognized, please try again!");
+        }
+    }
+
+    public BreathingType recognizeGivenBreathingType(String userInput) throws Exception {
+        String input = userInput.toUpperCase();
+
+        if (input.matches("NORMAL")) {
+            return BreathingType.NORMAL_BREATHING;
+        } else if (input.matches("AGONAL")) {
+            return BreathingType.AGONAL_BREATHING;
+        } else if (input.matches("ARREST")) {
+            return BreathingType.RESPIRATORY_ARREST;
+        } else {
+            throw new Exception("The state of respiration was not recognized, please try again!");
         }
     }
 
