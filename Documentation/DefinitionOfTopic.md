@@ -14,9 +14,10 @@ At first, the program initializes status of patient, and the user must analyze i
 	- circulation
 		- heart BPM (beats per minute)
 		- blood pressure
-			- systole
-			- diastole
+			- systolic pressure
+			- diastolic pressure
 			- pulse pressure
+			- perfusion pressure (/ main arterial pressure)
 		- heart state
 			- rhythm patterns - VF/VT/ST/SB/PEA/ASY (might implement more rhythms in future)
 				- VF = Ventricular Fibrillation
@@ -28,13 +29,13 @@ At first, the program initializes status of patient, and the user must analyze i
 		- effect of body temperature
 			- too cold heart won't start beating
 			- chest compressions applied to severely hypothermic patient (core temp < 30°C) can trigger VF
-			- hypothermia protects CNS from damage caused by hypoxia/anoxia
-	- ventilation
+			- on the other hand, hypothermia protects CNS from damage caused by hypoxia/anoxia
+	- respiration
 		- frequency of breathing (BF)
 		- (quality of breathing)
-			- (shallow)
-			- (gasping for air, agonal)
-			- (spontaneous breathing and airway control)
+			- normal breathing
+			- agonal breathing (agonal)
+			- respiratory arrest
 	- CNS (central nervous system) status
 		- level of cerebral perfusion & oxygenation
 		- cumulative cerebral damage caused by hypoxia/anoxia
@@ -57,7 +58,7 @@ At first, the program initializes status of patient, and the user must analyze i
 							- stagnation of blood pressure and perfusion during breaks in chest compressions
 					- defibrillation
 						- automatic defibrillator simulation (incl. recognition of rhythm pattern)
-						- biphase 150/200 J
+						- biphasic 150/200 J
 						- (possibly option to choose manual defibrillator instead of automatic one in future)
 					- iv. drug administration
 						- epinephrine/adrenaline bolus injections
