@@ -26,7 +26,7 @@ public class Patient {
     private boolean isMale;
     private CNS_Status cnsStatus;
     private CirculationStatus circulationStatus;
-    private VentilationStatus ventilationStatus;
+    private RespirationStatus ventilationStatus;
 
     public Patient(int age, int weightKg, int heightCm, int bodyTemperature, boolean isMale) {
         this.age = age;
@@ -63,7 +63,7 @@ public class Patient {
             System.out.println("Vitals of the patient have been initialized successfully!");
             return true;
         } catch (Exception e) {
-            System.out.println("Exception during initialization of status of patient!");
+            System.out.println("Exception during initialization of status of the patient!");
             return false;
         }
     }
@@ -80,16 +80,16 @@ public class Patient {
     
     @Override
     public String toString() {
-        // Check patient sex to prepare for printing
-        String sex = "";
+        // Check patient gender to prepare for printing
+        String gender = "";
         if (this.isMale == true) {
-            sex = "male";
+            gender = "male";
         } else {
-            sex = "female";
+            gender = "female";
         }
         
         // Print patient info
-        return "PATIENT:  SEX: " + sex + ", AGE: " + this.age + " yrs, HEIGHT: "
+        return "PATIENT:  GENDER: " + gender + ", AGE: " + this.age + " yrs, HEIGHT: "
                 + this.heightCm + " cm, WEIGHT: " + this.weightKg + " kg, BODY TEMPERATURE: "
                 + this.bodyTemperature + " °C";
     }

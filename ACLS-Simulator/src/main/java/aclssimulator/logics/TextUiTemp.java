@@ -27,7 +27,7 @@ public class TextUiTemp {
         int patientAge = -1;
 
         while (patientAge < 1 || patientAge > 110) {
-            System.out.print("Please type the age of patient (from 1 to 110 yrs): ");
+            System.out.print("Please type the age of the patient (from 1 to 110 yrs): ");
             patientAge = this.userInputHandler.parseInt(this.reader.nextLine());
         }
 
@@ -64,7 +64,7 @@ public class TextUiTemp {
         boolean isMale = false;
 
         while (!patientSexString.matches("male") || !patientSexString.matches("female")) {
-            System.out.print("Please type the sex of patient ('male' or 'female'): ");
+            System.out.print("Please type the gender of patient ('male' or 'female'): ");
             patientSexString = this.reader.nextLine();
             patientSexString = patientSexString.toLowerCase();
             if (patientSexString.matches("male")) {
@@ -76,7 +76,7 @@ public class TextUiTemp {
             }
         }
 
-        System.out.println("Patient sex set!");
+        System.out.println("Patient gender set!");
         return isMale;
     }
 
