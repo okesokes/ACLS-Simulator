@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package aclssimulator.logics;
 
@@ -11,7 +6,10 @@ package aclssimulator.logics;
  * @author okesokes
  */
 
-// Early WIP
+// WIP
+// "Dumb" data container/holder class
+// Initialized by class Patient
+// Accessed by class SimulateCirculation
 
 public class RespirationStatus {
     private int breathingFrequency;

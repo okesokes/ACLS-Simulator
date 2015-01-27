@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package aclssimulator.logics;
 
 import aclssimulator.logics.HeartState;
@@ -11,6 +7,9 @@ import aclssimulator.logics.HeartState;
  *
  * @author okesokes
  */
+
+// Contains functionality related to user input checks and tweaks
+
 public class UserInputHandlerTemp {
 
     public String toLowerCase(String input) {

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package aclssimulator.logics;
 
 import java.util.*;
@@ -12,8 +8,10 @@ import java.util.*;
  * @author okesokes
  */
 
-// Early WIP
-// Consider capsulating the vital organ functions to avoid cross dependencies
+// WIP
+// "Dumb" data container/holder class
+// Initialized by class Patient
+// Accessed by class SimulateCirculation
 
 public class CNS_Status implements Runnable {
     // cnsOxygenationLevel can vary from 0 (fatal level) to 100 (full oxygenation)
