@@ -113,9 +113,9 @@ public class Patient {
         }
         
         // Print patient info (excl. vitals)
-        return "PATIENT:  GENDER: " + gender + ", AGE: " + this.age + " yrs, HEIGHT: "
+        return "***  PATIENT:  GENDER: " + gender + ", AGE: " + this.age + " yrs, HEIGHT: "
                 + this.heightCm + " cm, WEIGHT: " + this.weightKg + " kg, BODY TEMPERATURE: "
-                + this.bodyTemperature + " °C";
+                + this.bodyTemperature + "°C  ***";
     }
 
 }

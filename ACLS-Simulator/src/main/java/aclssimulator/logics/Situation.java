@@ -1,5 +1,6 @@
 package aclssimulator.logics;
 
+import aclssimulator.ui.TextUiTemp;
 import java.util.Scanner;
 
 /**
@@ -9,6 +10,7 @@ import java.util.Scanner;
 // Early WIP
 // This class handles the requests related to initialization of the situation
 // Might become deprecated in future (possibly temporary solution as development convenience class)
+
 public class Situation {
 
     private Patient patient;
@@ -31,10 +33,11 @@ public class Situation {
         if (patientHeartState != HeartState.SINUS_BRADYCARDIA && patientHeartState != HeartState.SINUS_TACHYCARDIA) {
             this.textUiTemp.requestTimeInCardiacArrest();
             this.textUiTemp.requestCPRTime();
-        // ...otherwise request info about breathing of patient
+            // ...otherwise request info about breathing of patient
+            // (Note that patient can be in cardiac arrest and breathing (agonally) during the first minutes of cardiac arrest!)
         } else {
             this.textUiTemp.requestPatientBreathingFrequency();
-            this.textUiTemp.
+            this.textUiTemp.requestPatientBreathingType();
         }
 
         this.patient = new Patient(patientAge, patientWeight, patientHeight, patientBodyTemperature, isMale);

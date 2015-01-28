@@ -1,6 +1,7 @@
 
 package aclssimulator.logics;
 
+import aclssimulator.ui.TextUiTemp;
 import java.util.*;
 import aclssimulator.logics.*;
 
@@ -33,7 +34,7 @@ public class main {
         // 3. request situation and status parameters (optional)
         // 4. initialize situation and patient status
         
-        System.out.println("--- END OF PROGRAM EXECUTION ---");
+        System.out.println("*-*-*-* END OF PROGRAM EXECUTION *-*-*-*");
     }
 
 }

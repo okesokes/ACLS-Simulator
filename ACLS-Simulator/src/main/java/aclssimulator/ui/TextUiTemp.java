@@ -1,5 +1,6 @@
-package aclssimulator.logics;
+package aclssimulator.ui;
 
+import aclssimulator.logics.BreathingType;
 import aclssimulator.logics.HeartState;
 import java.util.Scanner;
 
@@ -7,7 +8,9 @@ import java.util.Scanner;
  *
  * @author okesokes
  */
+
 // Early WIP
+
 public class TextUiTemp {
 
     private Scanner reader;

@@ -1,5 +1,7 @@
-package aclssimulator.logics;
+package aclssimulator.ui;
 
+import aclssimulator.logics.BreathingType;
+import aclssimulator.logics.HeartState;
 import aclssimulator.logics.HeartState;
 
 /**
@@ -26,7 +28,7 @@ public class UserInputHandlerTemp {
     }
 
     public HeartState recognizeGivenRhythm(String rhythmAbbreviation) throws Exception {
-        String input = rhythmAbbreviation.toUpperCase();
+        String input = toUpperCaseCheck(rhythmAbbreviation);
 
         // Consider accessing enum HeartState via CirculationStatus instead of direct access
         // NSR is not supported yet
@@ -49,8 +51,8 @@ public class UserInputHandlerTemp {
         }
     }
 
-    public BreathingType recognizeGivenBreathingType(String userInput) throws Exception {
-        String input = userInput.toUpperCase();
+    public BreathingType recognizeGivenBreathingType(String breathingType) throws Exception {
+        String input = toUpperCaseCheck(breathingType);
 
         if (input.matches("NORMAL")) {
             return BreathingType.NORMAL_BREATHING;
