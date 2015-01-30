@@ -11,6 +11,9 @@ import aclssimulator.logics.HeartState;
  *
  * @author okesokes
  */
+
+// Deprecated, to be removed completely
+
 public class UserInputHandler {
     
     public String toLowerCase(String input) {

@@ -12,6 +12,9 @@ import java.util.Scanner;
  *
  * @author okesokes
  */
+
+// Deprecated, to be removed completely
+
 public class TextUi {
 
     private Scanner reader;

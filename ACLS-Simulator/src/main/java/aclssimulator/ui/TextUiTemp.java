@@ -90,7 +90,7 @@ public class TextUiTemp {
         return patientBodyTemperature;
     }
 
-    // WIP: methods to request vital function states to init vital functions with parameters set by user
+    // WIP: below: methods to request vital function states to init vital functions with parameters set by user
     public int requestTimeInCardiacArrest() {
         int timeInCardiacArrest = -1;
 

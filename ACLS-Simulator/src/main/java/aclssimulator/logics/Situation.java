@@ -7,7 +7,9 @@ import java.util.Scanner;
  *
  * @author okesokes
  */
+
 // Early WIP
+
 // This class handles the requests related to initialization of the situation
 // Might become deprecated in future (possibly temporary solution as development convenience class)
 

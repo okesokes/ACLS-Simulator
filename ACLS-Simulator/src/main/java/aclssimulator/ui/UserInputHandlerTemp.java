@@ -9,6 +9,7 @@ import aclssimulator.logics.HeartState;
  * @author okesokes
  */
 // Contains functionality related to user input checks and minor adjustments
+
 public class UserInputHandlerTemp {
 
     public String toLowerCaseCheck(String input) {

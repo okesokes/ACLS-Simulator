@@ -18,7 +18,7 @@ public class SimulateRespiration implements Runnable {
     @Override
     public void run() {
         try {
-
+            // WIP
         } catch (Exception e) {
             System.out.println("Exception during simulation of respiration status!");
             attemptRestoringRespirationSimulation();

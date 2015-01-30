@@ -20,7 +20,7 @@ public class SimulateCirculation implements Runnable {
     @Override
     public void run() {
         try {
-
+            // WIP
         } catch (Exception e) {
             System.out.println("Exception during simulation of circulation status!");
             attemptRestoringCirculationSimulation();
