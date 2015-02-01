@@ -26,9 +26,6 @@ public class CirculationStatus {
         this.heartState = heartState;
     }
 
-    // requires threaded execution
-    // treatment parameters yet to be included
-
     public int getSystolicPressure() {
         return this.systolicMmHg;
     }
@@ -61,6 +58,7 @@ public class CirculationStatus {
     public void setHeartState(HeartState newHeartState) {
         this.heartState = newHeartState;
         // react to change of new heart state (should reflect to other variables in this class immediately)
+        
         // link to other status classes (eg. ST -> VF ---> stagnation of blood pressure and 
         // cerebral oxygenation, agonal respiration etc.)
     }

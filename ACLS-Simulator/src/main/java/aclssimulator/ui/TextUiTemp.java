@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author okesokes
  */
 
-// Early WIP
+// WIP
 
 public class TextUiTemp {
 
@@ -91,6 +91,7 @@ public class TextUiTemp {
     }
 
     // WIP: below: methods to request vital function states to init vital functions with parameters set by user
+    
     public int requestTimeInCardiacArrest() {
         int timeInCardiacArrest = -1;
 
@@ -167,7 +168,7 @@ public class TextUiTemp {
             String userInput = this.reader.nextLine();
 
             // Attempt to recognize the state of respiration from user input - if this fails, print exception message and request it again from user
-            // otherwise save the given state of respiration, quit loop and return it
+            // otherwise save the given state of respiration, quit loop and return the respiration state set by user
             try {
                 patientBreathingType = this.userInputHandler.recognizeGivenBreathingType(userInput);
                 patientBreathingTypeSetByUser = true;

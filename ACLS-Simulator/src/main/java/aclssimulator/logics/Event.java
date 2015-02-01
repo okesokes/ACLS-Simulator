@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package aclssimulator.logics;
 
 /**
@@ -14,7 +10,7 @@ package aclssimulator.logics;
 // eg. upcoming classes "Treat" & "Time"/"Deteriorate"
 
 // Event provides essential functionality for both:
-// 1. transferring the calculated effects of event into patient simulation and
+// 1. transferring the calculated effects of event into patient simulation loops and
 // 2. logging and tracing the aforementioned effects for debugging and balancing purposes
 
 public interface Event {

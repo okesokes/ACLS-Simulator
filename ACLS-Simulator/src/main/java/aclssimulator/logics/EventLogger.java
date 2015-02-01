@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package aclssimulator.logics;
 
 /**
@@ -12,7 +8,7 @@ package aclssimulator.logics;
 
 // Early WIP
 
-// EventLogger logs every event affecting the patient status (incl. both negative and positive events)
+// EventLogger logs every Event affecting the patient status (incl. events from both internal and external sources)
 // and keeps track on their effects on the patient
 
 // The class can be used for adjusting the effects of treatment, debugging and
