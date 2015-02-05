@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package aclssimulator.logics;
 
-import aclssimulator.logics.HeartState;
 import java.util.Scanner;
 
 /**

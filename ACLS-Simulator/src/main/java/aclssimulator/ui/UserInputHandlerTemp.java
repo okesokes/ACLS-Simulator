@@ -2,7 +2,6 @@ package aclssimulator.ui;
 
 import aclssimulator.logics.BreathingType;
 import aclssimulator.logics.HeartState;
-import aclssimulator.logics.HeartState;
 
 /**
  *

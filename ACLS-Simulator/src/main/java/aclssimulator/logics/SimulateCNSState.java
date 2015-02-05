@@ -7,6 +7,9 @@ package aclssimulator.logics;
 
 // WIP
 
+// "Smart" class that is responsible for the actual simulation of CNS state (incl. feedback loop)
+// SimulateCNSState saves the state of CNS to class CNS_Status
+
 public class SimulateCNSState implements Runnable {
 
     public SimulateCNSState() {

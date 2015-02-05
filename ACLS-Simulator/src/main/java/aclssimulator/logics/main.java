@@ -3,7 +3,6 @@ package aclssimulator.logics;
 
 import aclssimulator.ui.TextUiTemp;
 import java.util.*;
-import aclssimulator.logics.*;
 
 /**
  *

@@ -5,6 +5,10 @@ package aclssimulator.logics;
  *
  * @author okesokes
  */
+
+// "Smart" class that is responsible for the actual simulation of respiration (incl. feedback loop)
+// SimulateRespiration saves the state of respiration to class RespirationStatus
+
 public class SimulateRespiration implements Runnable {
     
     public SimulateRespiration() {

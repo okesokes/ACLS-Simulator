@@ -5,8 +5,6 @@
  */
 package aclssimulator.logics;
 
-import aclssimulator.logics.HeartState;
-
 /**
  *
  * @author okesokes

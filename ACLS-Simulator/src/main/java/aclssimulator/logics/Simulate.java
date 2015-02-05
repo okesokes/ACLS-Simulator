@@ -26,7 +26,7 @@ public class Simulate implements Runnable {
         try {
             // If the new simulation speed factor is not in given limits, throw Exception to the method that called this method...
             if (newSimulationSpeedFactor < 10 || newSimulationSpeedFactor > 6000) {
-                throw new Exception("Speed factor of patient simulation must be between "
+                throw new Exception("Speed factor of patient simulation should be between "
                         + "10 (extremely slow, 1 s = 1/10 s) and 6000 (extremely fast, 1 s = 60 s)!");
                 // ...otherwise accept and set the new simulation speed factor
             } else {
