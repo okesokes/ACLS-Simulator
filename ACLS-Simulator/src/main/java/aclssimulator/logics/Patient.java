@@ -34,13 +34,15 @@ public class Patient {
         // (separate initialization of status and simulation completely)
         try {
             // WIP
-
+            
+            /*
             initRespiration();
 
             initCirculation();
 
             initCNSState();
-
+            */
+            
             // Example of initialization given below
             /*
              // Patient has been in cardiac arrest for ca. 5 minutes during arrival of EMS but given CPR the whole time
