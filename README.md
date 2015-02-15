@@ -5,3 +5,5 @@ should not be considered as (proper) ACLS training tool in any circumstances.
 
 **Use the program at your own risk!**
 
+
+**© okesokes 2015 - All rights reserved**
