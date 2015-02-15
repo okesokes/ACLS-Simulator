@@ -6,7 +6,11 @@ import java.util.*;
  *
  * @author okesokes
  */
+
 // WIP
+
+// "Dumb" data holder/container class, accessed by smart classes like simulation classes
+
 public class Patient {
 
     private int age;
